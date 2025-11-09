@@ -1,0 +1,25 @@
+.page-bg{position:fixed;inset:0;background:linear-gradient(180deg,#cfefff,#ffffff);z-index:-1}
+*{box-sizing:border-box}body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;margin:0;color:#042b48}
+.wrapper{max-width:1000px;margin:24px auto;padding:18px}
+.header{text-align:center;margin-bottom:18px}
+.logo{width:72px;height:72px;display:block;margin:0 auto 8px;border-radius:12px}
+.subtitle{color:#0b63a7;opacity:.85;margin-top:6px}
+.main{display:flex;gap:20px;align-items:start;flex-wrap:wrap;justify-content:center}
+.card{background:#fff;padding:18px;border-radius:12px;box-shadow:0 8px 24px rgba(11,63,104,0.06);min-width:320px;flex:1}
+.controls{display:flex;gap:12px;align-items:center;justify-content:center;margin-bottom:12px;flex-basis:100%}
+.btn{padding:10px 14px;border-radius:10px;border:none;cursor:pointer;font-weight:600;background:#0b63a7;color:#fff}
+.btn.ghost{background:transparent;color:#0b63a7;border:1px solid rgba(11,99,167,0.12)}
+.btn.primary{background:#1e90ff}
+.muted{color:#6b7280}
+#quiz-card.disabled{opacity:.6;pointer-events:none}
+.hidden{display:none}
+input{padding:8px 10px;border-radius:8px;border:1px solid #d9edf7;background:#f7feff;width:100%;margin-top:8px}
+.choices{list-style:none;padding:0;margin:12px 0}
+.choices li{padding:12px;border-radius:10px;margin-bottom:8px;border:1px solid #e6f6ff;cursor:pointer}
+.choices li.correct{background:linear-gradient(90deg,#d8fbe9,#e6fff4);border-color:#7de3a3}
+.choices li.wrong{background:linear-gradient(90deg,#ffdede,#ffecec);border-color:#ff9a9a}
+#meta{display:flex;justify-content:space-between;margin-bottom:8px;color:#6b7280}
+.leader-actions{display:flex;gap:8px;margin-top:8px}
+.actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.footer{text-align:center;margin-top:18px;color:#6b7280}
+@media(max-width:800px){.main{flex-direction:column}.controls{flex-direction:column}}

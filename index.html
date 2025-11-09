@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sky Fun Quiz</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+</head>
+<body>
+  <div class="page-bg"></div>
+  <div class="wrapper">
+    <header class="header">
+      <img src="assets/logo.svg" alt="Sky logo" class="logo">
+      <h1>Sky Fun Quiz</h1>
+      <p class="subtitle">Main quiz, hubungkan wallet Somnia untuk menyimpan hasil ke blockchain.</p>
+    </header>
+
+    <main class="main">
+      <div class="controls">
+        <button id="connect-btn" class="btn primary">🔗 Hubungkan Wallet Somnia</button>
+        <div id="wallet-info" class="muted">Belum terhubung</div>
+      </div>
+
+      <section id="quiz-card" class="card disabled">
+        <div id="start-screen">
+          <label>Nama: <input id="player-name" placeholder="Masukkan nama" /></label>
+          <button id="start-btn" class="btn" disabled>Start Quiz</button>
+        </div>
+
+        <div id="question-screen" class="hidden">
+          <div id="meta"><div id="player">Player: —</div><div id="timer">Time: <span id="time-left">0</span>s</div></div>
+          <h3 id="q-title">Question</h3>
+          <ul id="choices" class="choices"></ul>
+          <button id="next-btn" class="btn hidden">Next</button>
+        </div>
+
+        <div id="result-screen" class="hidden">
+          <h2>Finished!</h2>
+          <p id="result-text"></p>
+          <p id="tx-status" class="muted"></p>
+          <div class="actions">
+            <button id="save-score-btn" class="btn">Simpan ke Leaderboard Lokal</button>
+            <button id="send-onchain" class="btn primary">Kirim Hasil ke Somnia</button>
+            <button id="play-again-btn" class="btn ghost">Play Again</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="card" id="leaderboard-card">
+        <h3>Leaderboard</h3>
+        <ol id="leaderboard"></ol>
+        <div class="leader-actions">
+          <button id="clear-leaderboard" class="btn ghost">Clear</button>
+          <button id="export-csv" class="btn">Export CSV</button>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer">© 2025 Sky Fun Quiz – Built on Somnia Network</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
